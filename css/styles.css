@@ -73,16 +73,35 @@ y su contenedor padre es .image-container*/
   position: absolute; /*posiciona al elemento al inicio del de 
   donde se encuentra el relative del padre, sacamos elementos
   del flujo ordenado del html y lo pusimos encima*/
-  top: 0;
+  top: 50%; /*me lo deja desde el contenedor 50% para abajo,
+            yo necesito centrado para eso agrego el transform
+            y el translate aplicando a este elemento un traslado
+            del 50% para arriba sobre el eje y*/
+  transform: translateY(-50%);
   left: 0;
+  display: flex;
+  width: 100%;
+  color: #fff;
+  padding: 0 50px;
 }
 
 #hero .informacion-contenedor #foto {
-    width: 200px;
+  width: 200px;
 }
 
 #hero .informacion-contenedor #foto img {
-    border-radius: 100%;
+  border-radius: 100%;
 }
 
+#hero .informacion-contenedor .informacion {
+  margin-left: 20px;
+  font-weight: bold;
+}
 
+#hero .informacion-contenedor .informacion span {
+  display: inline-block; /*para que el margin se pueda utilizar, 
+  la propiedad display tiene que tener el valor de inline-block,
+  por defecto tiene inline*/
+  color: #b5b5b5;
+  margin-bottom: 70px;
+}
