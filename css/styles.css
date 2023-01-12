@@ -93,9 +93,16 @@ header {
   border-radius: 100%;
 }
 
+/*La foto se ve ovalada porque .informacion no tiene
+un width seteado enctonces CSS lo trata de calcular
+pero se encuentra con la foto que mide 200px y no
+sabe que hacer, eso hay que modificarlo y darle ese
+width a inforation*/
 #hero .informacion-contenedor .informacion {
   margin-left: 20px;
   font-weight: bold;
+  width: calc(100% - 200px); /*cuanto debe medir? tiene que medir el total del 
+  contenedor menos el tamanio del contenedor de la foto*/
 }
 
 #hero .informacion-contenedor .informacion span {
@@ -134,7 +141,7 @@ main .social-icons .social-icon {
   padding: 15px;
   margin-left: 8px;
   border-radius: 5px;
-  width: 100%;/*relativo al padre li*/
+  width: 100%; /*relativo al padre li*/
   height: 100%;
 }
 
