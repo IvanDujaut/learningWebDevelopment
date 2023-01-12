@@ -1,0 +1,56 @@
+/*Hay navegadores que por defecto agrefan un padding,
+en realidad me conviene que por defecto los elementos 
+vengan pegados a la "pared" para yo tener la libertad
+de controlarlos y darles el margen que quiero, entonces
+lo que hago es: configurarlo, como? a traves del selector
+universal * */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*esta propiedad lo que hace es 
+  evitar que los contenedores crezcan achicando el contenido*/
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+===========================================
+=========Aca tengo estilos generales=======
+===========================================
+*/
+
+.image-container {
+  display: flex;
+}
+
+/*combinando selectores --> busca la etiqueta img dentro de 
+la clase image-container y aplica los estilos*/
+.image-container img {
+  width: 100%;
+}
+
+/* 
+============================================
+=========Aca tengo los estilos header=======
+============================================
+*/
+
+header {
+  background: #1f1f1f;
+  padding: 10px 50px;
+}
+
+/*El #logo es el contenedor padre de la imagen que tiene ese width
+La imagen se esta estilando al 100% pero de su contenedor padre
+y su contenedor padre es .image-container*/
+#logo {
+    width: 50px;
+}
+
+#logo img {
+    border-radius: 100%;/*completamente circular*/
+    border: 2px solid #fff;
+}
