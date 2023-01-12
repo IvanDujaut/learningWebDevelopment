@@ -47,10 +47,42 @@ header {
 La imagen se esta estilando al 100% pero de su contenedor padre
 y su contenedor padre es .image-container*/
 #logo {
-    width: 50px;
+  width: 50px;
 }
 
 #logo img {
-    border-radius: 100%;/*completamente circular*/
-    border: 2px solid #fff;
+  border-radius: 100%; /*completamente circular*/
+  border: 2px solid #fff;
 }
+
+/* 
+============================================
+========Aca tengo los estilos frl hero======
+============================================
+*/
+#hero {
+  position: relative;
+}
+
+#hero #computadora {
+  display: inline-block;
+  width: 100%; /*el contenedor #computadora tiene este ancho*/
+}
+
+#hero .informacion-contenedor {
+  position: absolute; /*posiciona al elemento al inicio del de 
+  donde se encuentra el relative del padre, sacamos elementos
+  del flujo ordenado del html y lo pusimos encima*/
+  top: 0;
+  left: 0;
+}
+
+#hero .informacion-contenedor #foto {
+    width: 200px;
+}
+
+#hero .informacion-contenedor #foto img {
+    border-radius: 100%;
+}
+
+
