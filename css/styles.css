@@ -6,103 +6,154 @@ lo que hago es: configurarlo, como? a traves del selector
 universal * */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /*esta propiedad lo que hace es 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*esta propiedad lo que hace es 
     evitar que los contenedores crezcan achicando el contenido*/
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
   ===========================================
   =========Aca tengo estilos generales=======
   ===========================================
   */
-  
-  .image-container {
-    display: flex;
-  }
-  
-  /*combinando selectores --> busca la etiqueta img dentro de 
+
+.image-container {
+  display: flex;
+}
+
+/*combinando selectores --> busca la etiqueta img dentro de 
   la clase image-container y aplica los estilos*/
-  .image-container img {
-    width: 100%;
-  }
-  
-  /* 
+.image-container img {
+  width: 100%;
+}
+
+/* 
   ============================================
   =========Aca tengo los estilos header=======
   ============================================
   */
-  
-  header {
-    background: #1f1f1f;
-    padding: 10px 50px;
-  }
-  
-  /*El #logo es el contenedor padre de la imagen que tiene ese width
+
+header {
+  background: #1f1f1f;
+  padding: 10px 50px;
+}
+
+/*El #logo es el contenedor padre de la imagen que tiene ese width
   La imagen se esta estilando al 100% pero de su contenedor padre
   y su contenedor padre es .image-container*/
-  #logo {
-    width: 50px;
-  }
-  
-  #logo img {
-    border-radius: 100%; /*completamente circular*/
-    border: 2px solid #fff;
-  }
-  
-  /* 
+#logo {
+  width: 50px;
+}
+
+#logo img {
+  border-radius: 100%; /*completamente circular*/
+  border: 2px solid #fff;
+}
+
+/* 
   ============================================
-  ========Aca tengo los estilos frl hero======
+  ========Aca tengo los estilos del hero======
   ============================================
   */
-  #hero {
-    position: relative;
-  }
-  
-  #hero #computadora {
-    display: inline-block;
-    width: 100%; /*el contenedor #computadora tiene este ancho*/
-  }
-  
-  #hero .informacion-contenedor {
-    position: absolute; /*posiciona al elemento al inicio del de 
+#hero {
+  position: relative;
+}
+
+#hero #computadora {
+  display: inline-block;
+  width: 100%; /*el contenedor #computadora tiene este ancho*/
+}
+
+#hero .informacion-contenedor {
+  position: absolute; /*posiciona al elemento al inicio del de 
     donde se encuentra el relative del padre, sacamos elementos
     del flujo ordenado del html y lo pusimos encima*/
-    top: 50%; /*me lo deja desde el contenedor 50% para abajo,
+  top: 50%; /*me lo deja desde el contenedor 50% para abajo,
               yo necesito centrado para eso agrego el transform
               y el translate aplicando a este elemento un traslado
               del 50% para arriba sobre el eje y*/
-    transform: translateY(-50%);
-    left: 0;
-    display: flex;
-    width: 100%;
-    color: #fff;
-    padding: 0 50px;
-  }
-  
-  #hero .informacion-contenedor #foto {
-    width: 200px;
-  }
-  
-  #hero .informacion-contenedor #foto img {
-    border-radius: 100%;
-  }
-  
-  #hero .informacion-contenedor .informacion {
-    margin-left: 20px;
-    font-weight: bold;
-  }
-  
-  #hero .informacion-contenedor .informacion span {
-    display: inline-block; /*para que el margin se pueda utilizar, 
+  transform: translateY(-50%);
+  left: 0;
+  display: flex;
+  width: 100%;
+  color: #fff;
+  padding: 0 50px;
+}
+
+#hero .informacion-contenedor #foto {
+  width: 200px;
+}
+
+#hero .informacion-contenedor #foto img {
+  border-radius: 100%;
+}
+
+#hero .informacion-contenedor .informacion {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+#hero .informacion-contenedor .informacion span {
+  display: inline-block; /*para que el margin se pueda utilizar, 
     la propiedad display tiene que tener el valor de inline-block,
     por defecto tiene inline*/
-    color: #b5b5b5;
-    margin-bottom: 70px;
-  }
+  color: #b5b5b5;
+  margin-bottom: 70px;
+}
 
+/* 
+  ==============================
+  ========Estilos del main======
+  ==============================
+  */
+main {
+  padding: 100px;
+}
+
+main .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  list-style: none;
+}
+
+main .social-icons li {
+  margin-left: 8px;
+}
+
+main .social-icons .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  padding: 15px;
+  margin-left: 8px;
+  border-radius: 5px;
+  width: 100%;/*relativo al padre li*/
+  height: 100%;
+}
+
+main .social-icons #LinkedIn {
+  background: #0077b0;
+}
+
+main .social-icons #GitHub {
+  background: #23272d;
+}
+
+main .social-icons #Twitter {
+  background: #1da1f2;
+}
+
+main .social-icons #YouTube {
+  background: #f70000;
+}
+
+main .social-icons #Platzi {
+  background: #121f3d;
+}
